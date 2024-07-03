@@ -9,5 +9,6 @@ namespace MagicVilla.Data
        
 
        public DbSet<Villa> Villas { get; set; }
+        public DbSet<VillaNumber> VillaNumbers { get; set; }
     }
 }
