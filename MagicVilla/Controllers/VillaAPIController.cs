@@ -4,6 +4,7 @@ using MagicVilla.Logging;
 using MagicVilla.Models;
 using MagicVilla.Models.DTO;
 using MagicVilla.Repository.IRepository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
@@ -12,6 +13,7 @@ namespace MagicVilla.Controllers
    
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize(Roles = "admin")]
     public class VillaAPIController : ControllerBase
     {
         //private readonly ApplicationDbContext _db;
